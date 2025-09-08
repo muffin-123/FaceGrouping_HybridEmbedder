@@ -50,5 +50,5 @@ My approach already reduces this issue significantly by:
 - Combining embeddings from multiple models (**ArcFace, FaceNet, SFace, VGG-Face**)  
 - Applying **DBSCAN clustering**, which is more robust than simple thresholding  
 
-Still, this behavior reflects the complexity of face recognition in diverse conditions — and is also why many production systems (e.g., Google Photos) include an option for **manual group merging** as part of their workflow.
+Still, this behavior reflects the complexity of face recognition in diverse conditions and is also why many production systems (e.g., Google Photos) include an option for **manual group merging** as part of their workflow.
 
