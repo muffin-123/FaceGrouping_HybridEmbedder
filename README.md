@@ -39,3 +39,16 @@ You can also use **your own dataset**:
 - Update the dataset path in the notebook:
 ```python
 input_root = "/content/drive/MyDrive/Datasets/testDataset"
+```
+
+## ⚠️ Note on Face Grouping
+
+In real-world datasets, the **same person may appear under different lighting, poses, or facial expressions**, which can lead clustering algorithms to create multiple groups for the same individual.  
+
+My approach already reduces this issue significantly by:
+- Using **MTCNN alignment** for consistent face crops  
+- Combining embeddings from multiple models (**ArcFace, FaceNet, SFace, VGG-Face**)  
+- Applying **DBSCAN clustering**, which is more robust than simple thresholding  
+
+Still, this behavior reflects the complexity of face recognition in diverse conditions — and is also why many production systems (e.g., Google Photos) include an option for **manual group merging** as part of their workflow.
+
